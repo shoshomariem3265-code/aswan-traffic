@@ -1,0 +1,1236 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دليل شامل لإجراءات ترخيص المركبات والسلامة المرورية | Aswan Traffic</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1e3a8a', // Egyptian Police Blue
+                        accent: '#fbbf24', // Eagle Gold
+                        darkbg: '#0f172a',
+                        glass: 'rgba(255, 255, 255, 0.7)',
+                        glassDark: 'rgba(15, 23, 42, 0.8)',
+                    },
+                    fontFamily: {
+                        cairo: ['Cairo', 'sans-serif'],
+                        tajawal: ['Tajawal', 'sans-serif'],
+                    },
+                    animation: {
+                        'marquee': 'marquee 25s linear infinite',
+                        'blob': 'blob 7s infinite',
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        marquee: {
+                            '0%': { transform: 'translateX(100%)' },
+                            '100%': { transform: 'translateX(-100%)' },
+                        },
+                        blob: {
+                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                            '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+                            '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
+                        }
+                    }
+                }
+            }
+        };
+    </script>
+    
+    <style>
+        /* Custom styles */
+        .glass-effect {
+            background: var(--glass);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .dark .glass-effect {
+            background: var(--glassDark);
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #1e3a8a  0%, #3b82f6 100%);
+        }
+        
+        .text-gradient {
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .service-card {
+            transition: all 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .emergency-glow {
+            animation: glow 2s infinite alternate;
+        }
+        
+        @keyframes glow {
+            from { box-shadow: 0 0 5px #ef4444; }
+            to { box-shadow: 0 0 20px #ef4444; }
+        }
+        
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .marquee-container {
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        
+        .marquee-text {
+            display: inline-block;
+            animation: marquee 25s linear infinite;
+        }
+        
+        @media (max-width: 768px) {
+            .marquee-text {
+                animation: marquee 15s linear infinite;
+            }
+        }
+        
+   
+
+blob-animation {
+            animation: blob 7s infinite;
+        }
+        
+        .pulse-slow {
+            animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary);
+            border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: #1e40af;
+        }
+        
+        /* Dark mode scrollbar */
+        .dark ::-webkit-scrollbar-track {
+            background: var(--darkbg);
+        }
+        
+        .dark ::-webkit-scrollbar-thumb {
+            background: var(--accent);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 dark:bg-darkbg font-cairo transition-colors duration-300">
+    
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-700">
+         <nav class="container mx-auto px-4 py-3 flex items-center justify-between">
+
+    <!-- Logo & Title -->
+    <div class="flex items-center gap-3">
+         <div class="w-16 h-16 rounded-lg overflow-hidden shadow border bg-white flex items-center justify-center">
+    <img src="logo.png" alt="Aswan Traffic Logo" class="w-full h-full object-contain">
+</div>
+
+        <div>
+            <h1 class="font-bold text-gray-800 leading-tight">Aswan Traffic</h1>
+            <p class="text-sm text-gray-500">خدمات المرور الذكية</p>
+        </div>
+    </div>
+                
+                <!-- Navigation Links -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#services" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-accent transition">الخدمات</a>
+                    <a href="#procedures" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-accent transition">الإجراءات</a>
+                    <a href="#violations" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-accent transition">المخالفات</a>
+                    <a href="#emergency" class="text-gray-700 dark:text-gray-300 hover:text-red-500 dark:hover:text-red-400 transition">الطوارئ</a>
+                    <a href="#contact" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-accent transition">تواصل معنا</a>
+                </div>
+                
+                <!-- Dark Mode Toggle & Mobile Menu -->
+                <div class="flex items-center space-x-4">
+                    <button id="darkModeToggle" class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition">
+                        <i class="fas fa-moon text-xl"></i>
+                    </button>
+                    <button id="mobileMenuToggle" class="md:hidden p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Navigation -->
+            <div id="mobileMenu" class="hidden md:hidden mt-4 pt-4 border-t border-gray-200 dark:border-gray-700">
+                <div class="flex flex-col space-y-4">
+                    <a href="#services" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-accent transition">الخدمات</a>
+                    <a href="#procedures" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-accent transition">الإجراءات</a>
+                    <a href="#violations" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-accent transition">المخالفات</a>
+
+<a href="#emergency" class="text-gray-700 dark:text-gray-300 hover:text-red-500 dark:hover:text-red-400 transition">الطوارئ</a>
+                    <a href="#contact" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-accent transition">تواصل معنا</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient relative overflow-hidden">
+        <div class="absolute inset-0 bg-black/20"></div>
+        <div class="container mx-auto px-4 py-20 relative z-10">
+            <div class="text-center text-white">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                    <span class="italic">دليل شامل</span>
+                    <br>
+                    <span class="text-accent">لإجراءات ترخيص المركبات</span>
+                    <br>
+                    <span class="text-xl md:text-2xl font-normal">والسلامة المرورية</span>
+                </h1>
+                <p class="text-xl mb-8 max-w-3xl mx-auto leading-relaxed">
+                    خدمات إلكترونية متكاملة لتراخيص المركبات، المخالفات المرورية، والاستعلامات 
+                    في محافظة أسوان
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                   <a href="#challenge" onclick="startChallenge()" class="px-8 py-4 bg-accent text-primary rounded-lg font-bold hover:bg-yellow-400 transition-all transform hover:scale-105">
+  ابدأ التحدي
+  <i class="fas fa-arrow-left mr-2"></i>
+</a> 
+                    <a href="#emergency" class="px-8 py-4 bg-red-600 text-white rounded-lg font-bold hover:bg-red-700 transition-all transform hover:scale-105">
+                        الطوارئ
+                        <i class="fas fa-phone mr-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Floating Elements -->
+        <div class="absolute top-20 left-10 w-20 h-20 bg-accent/20 rounded-full floating"></div>
+        <div class="absolute bottom-20 right-10 w-16 h-16 bg-white/20 rounded-full floating" style="animation-delay: 1s;"></div>
+        <div class="absolute top-1/2 left-1/4 w-12 h-12 bg-accent/30 rounded-full floating" style="animation-delay: 2s;"></div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-50 dark:bg-slate-800">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 dark:text-white mb-4">خدماتنا الإلكترونية</h2>
+                <p class="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+                    جميع خدمات المرور في مكان واحد مع واجهة سهلة الاستخدام
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card bg-white dark:bg-slate-900 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
+                    <div class="w-16 h-16 bg-gradient-to-br from-primary to-blue-600 rounded-xl flex items-center justify-center mb-4">
+                        <i class="fas fa-car text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-3">ترخيص المركبات</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">تجديد تراخيص المركبات، استخراج تراخيص جديدة، ونقل الملكية</p>
+                    <button onclick="openVehicleModal()" class="text-primary hover:text-blue-700 font-semibold">
+                        تقدم الآن
+                        <i class="fas fa-arrow-left mr-2"></i>
+                    </button>
+                </div>
+                
+                 
+                
+                <!-- Service 3 -->
+                <div class="service-card bg-white dark:bg-slate-900 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
+                    <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center mb-4">
+                        <i class="fas fa-file-alt text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-3">الفحص الفني</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">حجز مواعيد الفحص الفني للمركبات</p>
+                    <button onclick="window.open('https://digital.gov.eg/services/traffic', '_blank')" class="text-green-500 hover:text-green-700 font-semibold">
+    احجز الآن
+    <i class="fas fa-arrow-left mr-2"></i>
+</button>
+                </div>
+                
+                
+                
+                <!-- Service 6 -->
+                <div class="service-card bg-white dark:bg-slate-900 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
+                    <div class="w-16 h-16 bg-gradient-to-br from-teal-500 to-teal-600 rounded-xl flex items-center justify-center mb-4">
+                        <i class="fas fa-question-circle text-white text-2xl"></i>
+                    </div>
+
+<h3 class="text-xl font-bold text-gray-800 dark:text-white mb-3">الاستعلامات</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">الاستعلام عن حالة الطلبات والتراخيص</p>
+                    <button onclick="window.open('https://digital.gov.eg/', '_blank')" class="text-teal-500 hover:text-teal-700 font-semibold">
+    استعلم الآن
+    <i class="fas fa-arrow-left mr-2"></i>
+</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <section id="procedures" class="py-20 bg-white">
+  <div class="container mx-auto px-4">
+
+    <div class="text-center mb-12">
+      <h2 class="text-4xl font-bold mb-4">أهم المخالفات المرورية وعقوباتها</h2>
+      <p class="text-gray-600">تحديث 2025 – طبقاً لقانون المرور المصري</p>
+    </div>
+
+    <div class="space-y-6 max-w-4xl mx-auto">
+
+      <div class="p-5 rounded-xl border bg-red-50">
+        <h3 class="font-bold text-lg">1. السير عكس الاتجاه</h3>
+        <p class="text-gray-700">غرامة: 4000 – 8000 جنيه + سحب الرخصة</p>
+      </div>
+
+      <div class="p-5 rounded-xl border bg-red-50">
+        <h3 class="font-bold text-lg">2. القيادة تحت تأثير المخدر</h3>
+        <p class="text-gray-700">غرامة: 4000 – 8000 جنيه + حبس وسحب الرخصة</p>
+      </div>
+
+      <div class="p-5 rounded-xl border bg-yellow-50">
+        <h3 class="font-bold text-lg">3. القيادة بدون رخصة</h3>
+        <p class="text-gray-700">غرامة: 1000 – 3000 جنيه</p>
+      </div>
+
+      <div class="p-5 rounded-xl border bg-yellow-50">
+        <h3 class="font-bold text-lg">4. طمس أو تغيير اللوحات</h3>
+        <p class="text-gray-700">غرامة: 1500 – 3000 جنيه + سحب الرخصة</p>
+      </div>
+
+      <div class="p-5 rounded-xl border bg-green-50">
+        <h3 class="font-bold text-lg">5. تجاوز السرعة المقررة</h3>
+        <p class="text-gray-700">غرامة: 300 – 1500 جنيه</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+    <!-- Violations Section -->
+
+<section id="violations" class="py-20 bg-gray-50 dark:bg-slate-800">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 dark:text-white mb-4">المخالفات المرورية</h2>
+                <p class="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+                    الاستعلام عن المخالفات وسدادها إلكترونياً
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white dark:bg-slate-900 rounded-xl p-6 shadow-lg">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-exclamation-triangle text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-3">الاستعلام عن المخالفات</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">معرفة المخالفات المرورية المسجلة على المركبة</p>
+                        <a href="https://ppo.gov.eg/webcenter/portal/PPOPortal/pages_publicservices/trafficservices" target="_blank" class="inline-block px-6 py-3 bg-red-500 text-white rounded-lg hover:bg-red-600 transition">
+                            استعلم الآن
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="bg-white dark:bg-slate-900 rounded-xl p-6 shadow-lg">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-credit-card text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-3">سداد المخالفات</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">سداد المخالفات إلكترونياً باستخدام البطاقات البنكية</p>
+                        <a href="https://digital.gov.eg/" target="_blank" class="inline-block px-6 py-3 bg-green-500 text-white rounded-lg hover:bg-green-600 transition">
+                            سدد الآن
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="bg-white dark:bg-slate-900 rounded-xl p-6 shadow-lg">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-file-invoice text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-3">تفاصيل المخالفة</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">معرفة تفاصيل المخالفة والمادة القانونية</p>
+                         <button onclick="window.open('https://ppo.gov.eg/webcenter/portal/PPOPortal/pages_publicservices/trafficservices', '_blank')" class="px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition">
+                            التفاصيل
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Emergency Section -->
+    <section id="emergency" class="py-20 bg-red-600 text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">أرقام الطوارئ</h2>
+                <p class="text-xl max-w-2xl mx-auto">
+                    في حالات الطوارئ، اتصل على الأرقام التالية
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4 emergency-glow">
+                        <i class="fas fa-traffic-light text-3xl"></i>
+
+</div>
+                    <h3 class="text-2xl font-bold mb-2">المرور المركزي</h3>
+                    <a href="tel:136" class="text-3xl font-bold text-accent hover:text-yellow-300 transition">
+                        136
+                    </a>
+                    <p class="mt-2">للإبلاغ عن الحوادث والمشكلات المرورية</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4 emergency-glow">
+                        <i class="fas fa-ambulance text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2">الإسعاف</h3>
+                    <a href="tel:123" class="text-3xl font-bold text-accent hover:text-yellow-300 transition">
+                        123
+                    </a>
+                    <p class="mt-2">للحوادث والحالات الطبية الطارئة</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4 emergency-glow">
+                        <i class="fas fa-shield-alt text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2">النجدة</h3>
+                    <a href="tel:122" class="text-3xl font-bold text-accent hover:text-yellow-300 transition">
+                        122
+                    </a>
+                    <p class="mt-2">للحوادث والحالات الأمنية</p>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <p class="text-lg mb-4">إرشادات السلامة أثناء القيادة</p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <span class="px-4 py-2 bg-white/20 rounded-full">ارتداء حزام الأمان</span>
+                    <span class="px-4 py-2 bg-white/20 rounded-full">عدم استخدام الهاتف أثناء القيادة</span>
+                    <span class="px-4 py-2 bg-white/20 rounded-full">الالتزام بالسرعة المحددة</span>
+                    <span class="px-4 py-2 bg-white/20 rounded-full">الانتباه لحركة المشاة</span>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- ========== Traffic Challenge Section ========== -->
+<section id="challenge" class="py-20 bg-gray-50 hidden ">
+  <div class="max-w-3xl mx-auto bg-white rounded-2xl shadow-lg p-6">
+
+    <div class="flex justify-between items-center mb-4">
+      <div id="progressText">السؤال 1 / 20</div>
+      <div id="scoreText">0 ⭐</div>
+    </div>
+
+    <div class="w-full bg-gray-200 rounded-full h-2 mb-6">
+      <div id="progressBar" class="bg-blue-600 h-2 rounded-full" style="width: 0%"></div>
+    </div>
+
+    <h2 id="questionText" class="text-xl font-bold mb-6 text-center">
+      هنا السؤال
+    </h2>
+
+    <div id="answersContainer" class="space-y-4">
+      <!-- الأجوبة -->
+    </div>
+
+  </div>
+</section>
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-50 dark:bg-slate-800">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 dark:text-white mb-4">تواصل معنا</h2>
+                <p class="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+                    نحن هنا للرد على استفساراتكم ومساعدتكم
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Contact Form -->
+                <div class="bg-white dark:bg-slate-900 rounded-xl p-8 shadow-lg">
+                    <h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-6">اترك رسالتك</h3>
+                    <form id="contactForm" class="space-y-6">
+                        <div>
+                            <label class="block text-gray-700 dark:text-gray-300 mb-2">الاسم(اختياري)</label>
+                            <input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-800 dark:text-white"  >
+                        </div>
+                        
+                        <div>
+                            <label class="block text-gray-700 dark:text-gray-300 mb-2">رقم الهاتف(اختياري)</label>
+                            <input type="tel" id="phone" class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-800 dark:text-white"  >
+                        </div>
+                        
+                        <div>
+
+<label class="block text-gray-700 dark:text-gray-300 mb-2">الوحدة المحلية</label>
+                            <select id="gov" class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-800 dark:text-white">
+                                <option value="">اختر الوحدة</option>
+                                <option value="أسوان">أسوان</option>
+                                <option value="إدفو">إدفو</option>
+                                <option value="كوم أمبو">كوم أمبو</option>
+                                <option value="نصر النوبة">نصر النوبة</option>
+                                <option value="دراو">دراو</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-gray-700 dark:text-gray-300 mb-2">رسالتك</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-800 dark:text-white" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-primary hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300">
+                            إرسال
+                            <i class="fas fa-paper-plane mr-2"></i>
+                        </button>
+                    </form>
+                </div>
+                
+                
+                    
+                    <!-- Government Links -->
+                    
+
+     
+                
+                
+                 <!-- Contact Info -->
+                <div class="space-y-8">
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-6">معلومات التواصل</h3>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center ml-4">
+                                    <i class="fas fa-phone text-white"></i>
+                                </div>
+                                <div>
+                                    <p class="font-semibold text-gray-800 dark:text-white">رقم الاتصال</p>
+                                    <a href="tel:097_1234455" class="text-gray-600 dark:text-gray-300 hover:text-primary">097_1234455</a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center ml-4">
+                                    <i class="fas fa-envelope text-white"></i>
+                                </div>
+                                <div>
+                                    <p class="font-semibold text-gray-800 dark:text-white">البريد الإلكتروني</p>
+                                    <span class="text-gray-600 dark:text-gray-300">aswan.traffic@gmail.com</span>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center ml-4">
+                                    <i class="fas fa-map-marker-alt text-white"></i>
+                                </div>
+                                <div>
+                                    <p class="font-semibold text-gray-800 dark:text-white">العنوان</p>
+                                    <span class="text-gray-600 dark:text-gray-300">محافظة أسوان - مدينة أسوان</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            <div>
+
+<h4 class="text-lg font-bold text-gray-800 dark:text-white mb-4">روابط مهمة</h4>
+                        <div class="space-y-2">
+                            <a href="https://moi.gov.eg/" target="_blank" class="block text-primary hover:text-blue-700 dark:text-accent dark:hover:text-yellow-300">
+                                وزارة الداخلية
+                            </a>
+                            <a href="https://digital.gov.eg/" target="_blank" class="block text-primary hover:text-blue-700 dark:text-accent dark:hover:text-yellow-300">
+                                بوابة مصر الرقمية
+                            </a>
+                            <a href="https://ppo.gov.eg/" target="_blank" class="block text-primary hover:text-blue-700 dark:text-accent dark:hover:text-yellow-300">
+                                النيابة العامة
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+                
+                
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p>&copy; 2025 Aswan Traffic Services. جميع الحقوق محفوظة.</p>
+
+</div>
+            
+            <!-- Management Panel Button -->
+            <div class="text-center mt-8">
+                <button onclick="showManagementPanel()" class="text-gray-500 hover:text-accent transition text-xl group" title="لوحة الإدارة المتكاملة">
+                    <i class="fa-solid fa-cogs group-hover:animate-spin"></i>
+                </button>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Vehicle License Modal -->
+    <div id="vehicleModal" class="hidden fixed inset-0 z-50 overflow-y-auto">
+        <div class="flex items-center justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+            <!-- Background overlay -->
+            <div class="fixed inset-0 transition-opacity bg-gray-500 bg-opacity-75" onclick="closeVehicleModal()"></div>
+            
+            <!-- Modal panel -->
+            <div class="inline-block align-bottom bg-white rounded-lg text-right overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
+                <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+                    <div class="sm:flex sm:items-start">
+                        <div class="mt-3 text-center sm:mt-0 sm:text-right sm:w-full">
+                            <h3 class="text-lg leading-6 font-medium text-gray-900 mb-4">
+                                تجديد رخصة المركبة
+                            </h3>
+                            <div class="mt-2">
+                                <p class="text-sm text-gray-500">
+                                    سيتم توجيهك إلى بوابة مصر الرقمية لإتمام عملية التجديد
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+                    <a href="https://share.google/abBzWDnSwqhLphqtL" target="_blank" class="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-primary text-base font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary sm:ml-3 sm:w-auto sm:text-sm">
+                        المتابعة
+                    </a>
+                    <button type="button" onclick="closeVehicleModal()" class="mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary sm:mt-0 sm:w-auto sm:text-sm">
+                        إلغاء
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <!-- Inquiry Modal -->
+    <div id="inquiryModal" class="hidden fixed inset-0 z-50 overflow-y-auto">
+        <div class="flex items-center justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+            <div class="fixed inset-0 transition-opacity bg-gray-500 bg-opacity-75" onclick="closeInquiry()"></div>
+            
+            <div class="inline-block align-bottom bg-white rounded-lg text-right overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
+                <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+                    <div class="sm:flex sm:items-start">
+                        <div class="mt-3 text-center sm:mt-0 sm:text-right sm:w-full">
+                            <h3 class="text-lg leading-6 font-medium text-gray-900 mb-4">
+                                الاستعلام عن الحالة
+                            </h3>
+                            <div class="mt-2">
+                                <p class="text-sm text-gray-500">
+                                    سيتم توجيهك إلى صفحة الاستعلامات
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+                    <button type="button" onclick="closeInquiry()" class="mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary sm:mt-0 sm:w-auto sm:text-sm">
+                        إغلاق
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Admin Section (Hidden by default) -->
+    <section id="admin" style="display:none;padding:40px;background:#eaeaea">
+        <h2 style="text-align:center">مراجعة الشكاوى (للإدارة)</h2>
+        <div id="adminList" style="max-width:800px;margin:20px auto;background:#fff;padding:20px;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.1)">
+            <!-- Complaints will be loaded here -->
+        </div>
+    </section>
+
+    <!-- Challenge Results Section (Hidden by default) -->
+    <section id="challenge-results" style="display:none">
+        <div id="challengeResultsBox">
+            <h3>نتيجة التحدي</h3>
+            <div id="cr-login">
+                <input type="password" id="cr-pass" placeholder="كلمة المرور" />
+            </div>
+            <div id="cr-content">
+                <div id="cr-stats">
+                    <div class="stat">عدد المشاركين: <strong id="cr-count">0</strong></div>
+                    <div class="stat">أعلى نتيجة: <strong id="cr-max">—</strong></div>
+                    <div class="stat">أقل نتيجة: <strong id="cr-min">—</strong></div>
+                    <div class="stat">متوسط النتائج: <strong id="cr-avg">—</strong></div>
+                </div>
+                <table id="cr-table">
+                    <thead>
+                        <tr>
+                            <th>النتيجة</th>
+                            <th>التاريخ</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cr-body"></tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        /* Styles for challenge results */
+        #challenge-results {
+            padding: 40px;
+            background: #f8fafc;
+        }
+        
+        #challengeResultsBox {
+            max-width: 800px;
+            margin: 0 auto;
+
+background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        #challengeResultsBox h3 {
+            background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+            color: white;
+            padding: 20px;
+            margin: 0;
+            text-align: center;
+            font-size: 24px;
+        }
+        
+        #cr-login {
+            padding: 30px;
+            text-align: center;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        #cr-pass {
+            width: 300px;
+            padding: 15px;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            font-size: 16px;
+            text-align: center;
+        }
+        
+        #cr-content {
+            padding: 30px;
+        }
+        
+        #cr-stats {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+        
+        .stat {
+            background: #f8fafc;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin: 10px;
+            min-width: 150px;
+            border: 1px solid #e5e7eb;
+        }
+        
+        #cr-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        
+        #cr-table th,
+        #cr-table td {
+            padding: 12px;
+            text-align: center;
+            border: 1px solid #e5e7eb;
+        }
+        
+        #cr-table th {
+            background: #f8fafc;
+            font-weight: bold;
+        }
+        
+        #cr-body tr:nth-child(even) {
+            background: #f8fafc;
+        }
+        
+        @media (max-width: 768px) {
+            #cr-stats {
+                flex-direction: column;
+            }
+            
+            .stat {
+                margin: 5px 0;
+            }
+            
+            #cr-pass {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    </style>
+
+    <!-- JavaScript -->
+    <script>
+        // Dark mode toggle
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const html = document.documentElement;
+        
+        darkModeToggle.addEventListener('click', () => {
+            html.classList.toggle('dark');
+            localStorage.setItem('darkMode', html.classList.contains('dark'));
+        });
+        
+        // Check for saved dark mode preference
+        if (localStorage.getItem('darkMode') === 'true') {
+            html.classList.add('dark');
+        }
+        
+        // Mobile menu toggle
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        mobileMenuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        
+        // Modal functions
+        function openVehicleModal() {
+            document.getElementById('vehicleModal').classList.remove('hidden');
+        }
+        
+        function closeVehicleModal() {
+            document.getElementById('vehicleModal').classList.add('hidden');
+        }
+        
+         
+        // Admin functions
+        function render(){
+            const list=document.getElementById('adminList');
+            const data=JSON.parse(localStorage.getItem('complaints')||'[]');
+            list.innerHTML='';
+            if(data.length===0){list.innerHTML='<p style="text-align:center">لا توجد شكاوى</p>';return;}
+            data.forEach((c,i)=>{
+                list.innerHTML+=`<div style="background:#fff;padding:15px;margin:10px 0">
+                    <strong>شكوى رقم ${i+1}</strong><br>
+                    الوحدة: ${c.gov}<br>
+                    الهاتف: ${c.phone}<br>
+                    الوقت: ${c.time}<br>
+                    الشكوى: ${c.text}
+                </div>`;
+            });
+        }
+        
+        // Challenge results functions
+        function openChallengeResults(){
+            const p = document.getElementById('cr-pass').value;
+            if(p !== 'moh99'){ alert('كلمة المرور غير صحيحة'); return; }
+
+            const data = JSON.parse(localStorage.getItem('quizResults')||'[]');
+            const body = document.getElementById('cr-body');
+            body.innerHTML = '';
+
+            if(!data.length){
+                document.getElementById('cr-count').textContent = 0;
+                document.getElementById('cr-max').textContent = '—';
+                document.getElementById('cr-min').textContent = '—';
+                document.getElementById('cr-avg').textContent = '—';
+            } else {
+                const scores = data.map(r=>Number(r.score)).filter(n=>!isNaN(n));
+                const sum = scores.reduce((a,b)=>a+b,0);
+                document.getElementById('cr-count').textContent = scores.length;
+                document.
+
+getElementById('cr-max').textContent = Math.max(...scores);
+                document.getElementById('cr-min').textContent = Math.min(...scores);
+                document.getElementById('cr-avg').textContent = (sum/scores.length).toFixed(2);
+
+                data.forEach(r=>{
+                    const tr = document.createElement('tr');
+                    tr.innerHTML = `
+                        <td>${r.score}</td>
+                        <td>${r.date}</td>
+                    `;
+                    body.appendChild(tr);
+                });
+            }
+        }
+        
+        // Management panel function
+        function showManagementPanel(){
+            const pass = prompt('ادخل كلمة المرور للوحة الإدارة');
+            if(pass === 'moh99'){
+                // Show both admin and results sections
+                document.getElementById('admin').style.display = 'block';
+                document.getElementById('challenge-results').style.display = 'block';
+                render();
+                openChallengeResults();
+                // Scroll to the first section (admin)
+                document.getElementById('admin').scrollIntoView();
+            } else {
+                alert('كلمة المرور غير صحيحة');
+            }
+        }
+        
+        // Contact form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = {
+                name: document.getElementById('name').value,
+                phone: document.getElementById('phone').value,
+                gov: document.getElementById('gov').value,
+                text: document.getElementById('message').value,
+                time: new Date().toLocaleString()
+            };
+            
+            // Save to localStorage
+            let complaints = JSON.parse(localStorage.getItem('complaints') || '[]');
+            complaints.push(formData);
+            localStorage.setItem('complaints', JSON.stringify(complaints));
+            
+            alert('تم إرسال رسالتك بنجاح! سيتم التواصل معك قريباً.');
+            this.reset();
+        });
+        
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize any default data if needed
+            if (!localStorage.getItem('quizResults')) {
+                localStorage.setItem('quizResults', JSON.stringify([]));
+            }
+            if (!localStorage.getItem('complaints')) {
+                localStorage.setItem('complaints', JSON.stringify([]));
+            }
+        });
+    </script>
+
+ <script>
+// ===== الأسئلة =====
+const questions = [
+    {
+        q: "ما هو المثلث العاكس؟",
+        answers: [
+            { text: "أداة للطوارئ توضع خلف السيارة", correct: true },
+            { text: "زينة للسيارة", correct: false },
+            { text: "علامة طريق", correct: false }
+        ]
+    },
+    {
+        q: "عند الإشارة الحمراء يجب:",
+        answers: [
+            { text: "زيادة السرعة", correct: false },
+            { text: "التوقف تمامًا", correct: true },
+            { text: "التنبيه بالكلاكس", correct: false }
+        ]
+    },
+    {
+        q: "حزام الأمان:",
+        answers: [
+            { text: "اختياري", correct: false },
+            { text: "ضروري", correct: true },
+            { text: "للطرق السريعة فقط", correct: false }
+        ]
+    },
+    {
+        q: "استخدام الهاتف أثناء القيادة:",
+        answers: [
+            { text: "مسموح", correct: false },
+            { text: "ممنوع", correct: true },
+            { text: "حسب الطريق", correct: false }
+        ]
+    },
+    {
+        q: "السرعة الزائدة تؤدي إلى:",
+        answers: [
+            { text: "توفير الوقت", correct: false },
+            { text: "زيادة الحوادث", correct: true },
+            { text: "تحسين القيادة", correct: false }
+        ]
+    },
+    {
+        q: "عند سماع سيارة إسعاف يجب:",
+        answers: [
+            { text: "تزيد السرعة", correct: false },
+            { text: "تفسح الطريق", correct: true },
+            { text: "تتجاهلها", correct: false }
+        ]
+    },
+    {
+        q: "الخط المتصل في الطريق يعني:",
+        answers: [
+            { text: "مسموح التخطي", correct: false },
+            { text: "ممنوع التخطي", correct: true },
+            { text: "حسب الوقت", correct: false }
+        ]
+    },
+    {
+        q: "القيادة ليلاً تحتاج:",
+        answers: [
+            { text: "إطفاء الأنوار", correct: false },
+            { text: "تشغيل الأنوار", correct: true },
+            { text: "السير ببطء فقط", correct: false }
+        ]
+    },
+    {
+        q: "الأولوية في التقاطع تكون:",
+        answers: [
+            { text: "للأسرع", correct: false },
+            { text: "لمن على اليمين", correct: true },
+            { text: "لمن يستخدم الكلاكس", correct: false }
+        ]
+    },
+    {
+        q: "الوقوف في مكان ممنوع:",
+        answers: [
+            { text: "عادي", correct: false },
+            { text: "مخالفة", correct: true },
+            { text: "مسموح دقيقة", correct: false }
+        ]
+    },
+    {
+        q: "إشارة قف (STOP) تعني:",
+        answers: [
+            { text: "تهدئة السرعة", correct: false },
+            { text: "توقف كامل", correct: true },
+            { text: "تنبيه فقط", correct: false }
+        ]
+    },
+    {
+        q: "ترك مسافة أمان بين السيارات:",
+        answers: [
+            { text: "غير مهم", correct: false },
+            { text: "مهم لتجنب الحوادث", correct: true },
+            { text: "يقلل السرعة فقط", correct: false }
+        ]
+    },
+    {
+        q: "القيادة تحت تأثير المخدر:",
+        answers: [
+            { text: "مسموحة بحذر", correct: false },
+            { text: "جريمة ومخالفة خطيرة", correct: true },
+            { text: "حسب الطريق", correct: false }
+        ]
+    },
+    {
+        q: "تجاوز السرعة المقررة:",
+        answers: [
+            { text: "ذكاء", correct: false },
+            { text: "مخالفة", correct: true },
+            { text: "يعتمد على الزحمة", correct: false }
+        ]
+    },
+    {
+        q: "عند المطر يجب:",
+        answers: [
+            { text: "زيادة السرعة", correct: false },
+            { text: "القيادة بحذر وتقليل السرعة", correct: true },
+            { text: "إطفاء الأنوار", correct: false }
+        ]
+    },
+    {
+        q: "حمل أكثر من العدد المسموح:",
+        answers: [
+            { text: "عادي", correct: false },
+            { text: "مخالفة", correct: true },
+            { text: "يوفر بنزين", correct: false }
+        ]
+    },
+    {
+        q: "الإشارة الصفراء تعني:",
+        answers: [
+            { text: "قف فورًا", correct: false },
+            { text: "استعد للتوقف", correct: true },
+            { text: "سرّع", correct: false }
+        ]
+    },
+    {
+q: "استخدام الأنوار العالية في الزحمة:",
+        answers: [
+            { text: "مفيد", correct: false },
+            { text: "مزعج وخطر", correct: true },
+            { text: "عادي", correct: false }
+        ]
+    },
+    {
+        q: "المشاة لهم:",
+        answers: [
+            { text: "لا أولوية", correct: false },
+            { text: "أولوية في أماكن العبور", correct: true },
+            { text: "حسب السائق", correct: false }
+        ]
+    },
+    {
+        q: "الصيانة الدورية للسيارة:",
+        answers: [
+            { text: "غير مهمة", correct: false },
+            { text: "تقلل الأعطال والحوادث", correct: true },
+            { text: "للجديد فقط", correct: false }
+        ]
+    }
+];
+
+// ===== المتغيرات =====
+let currentQuestion = 0;
+let score = 0;
+
+const challengeSection = document.getElementById("challenge");
+const questionText = document.getElementById("questionText");
+const answersContainer = document.getElementById("answersContainer");
+const progressText = document.getElementById("progressText");
+const scoreText = document.getElementById("scoreText");
+const progressBar = document.getElementById("progressBar");
+
+// ===== بدء التحدي =====
+function startChallenge() {
+    currentQuestion = 0;
+    score = 0;
+    challengeSection.classList.remove("hidden");
+    loadQuestion();
+    challengeSection.scrollIntoView({ behavior: "smooth" });
+}
+
+// ===== تحميل سؤال =====
+function loadQuestion() {
+    const q = questions[currentQuestion];
+    questionText.textContent = q.q;
+    answersContainer.innerHTML = "";
+
+    progressText.textContent = `السؤال ${currentQuestion + 1} / ${questions.length}`;
+    scoreText.textContent = `${score} ⭐`;
+    progressBar.style.width = ((currentQuestion) / questions.length) * 100 + "%";
+
+    q.answers.forEach(ans => {
+        const btn = document.createElement("button");
+        btn.textContent = ans.text;
+        btn.className = "w-full p-4 border rounded-xl hover:bg-blue-50 text-right";
+        btn.onclick = () => selectAnswer(ans.correct);
+        answersContainer.appendChild(btn);
+    });
+}
+
+// ===== اختيار إجابة =====
+function selectAnswer(correct) {
+    if (correct) score += 5;
+    currentQuestion++;
+
+    if (currentQuestion < questions.length) {
+        loadQuestion();
+    } else {
+        showResult();
+    }
+}
+
+// ===== حفظ النتيجة =====
+function saveResult(score) {
+    let results = JSON.parse(localStorage.getItem("challengeResults")) || [];
+    results.push({
+        score: score,
+        date: new Date().toLocaleString("ar-EG")
+    });
+    localStorage.setItem("challengeResults", JSON.stringify(results));
+}
+
+// ===== عرض النتيجة =====
+function showResult() {
+    const finalScore = score;
+
+    questionText.textContent = `🎉 خلصتي التحدي! نتيجتك: ${finalScore} من ${questions.length * 5}`;
+    answersContainer.innerHTML = "";
+    progressBar.style.width = "100%";
+
+    saveResult(finalScore);
+    updateResultsPage();
+}
+
+// ===== تحديث صفحة النتائج =====
+function updateResultsPage() {
+    let results = JSON.parse(localStorage.getItem("challengeResults")) || [];
+
+    const countEl = document.getElementById("cr-count");
+    const maxEl = document.getElementById("cr-max");
+    const minEl = document.getElementById("cr-min");
+    const avgEl = document.getElementById("cr-avg");
+    const table = document.getElementById("cr-table");
+
+    if (!countEl) return;
+
+    countEl.textContent = results.length;
+
+    if (results.length === 0) return;
+
+    let scores = results.map(r => r.score);
+
+    let max = Math.max(...scores);
+    let min = Math.min(...scores);
+    let avg = Math.round(scores.reduce((a,b)=>a+b,0) / scores.length);
+
+    maxEl.textContent = max;
+    minEl.textContent = min;
+    avgEl.textContent = avg;
+
+    const tbody = table.querySelector("tbody");
+    tbody.innerHTML = "";
+
+    results.forEach(r => {
+        const tr = document.createElement("tr");
+        tr.innerHTML = `
+            <td>${r.date}</td>
+            <td>${r.score}</td>
+        `;
+        tbody.appendChild(tr);
+    });
+}
+
+// ===== تحديث تلقائي عند فتح الصفحة =====
+updateResultsPage();
+</script>
+</body>
+</html>
